@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Show dashboard
+Route::get('/', 'CustomerController@index');
+
+// Api query routes
+Route::get('/api/v1/customer', 'CustomerController@getData');
